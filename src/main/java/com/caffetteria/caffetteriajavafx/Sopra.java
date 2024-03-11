@@ -36,6 +36,7 @@ public class Sopra extends HBox {
         getChildren().add(caffe);
         getChildren().add(tea);
         getChildren().add(choc);
+        getChildren().add(capp);
 
     }
 

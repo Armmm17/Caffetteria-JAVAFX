@@ -18,7 +18,8 @@ public class Sotto extends HBox {
         this.main = main;
 
         setMinWidth(135);
-        setAlignment(Pos.BOTTOM_CENTER);
+
+        setAlignment(Pos.CENTER);
 
         this.label = new Label("Credit: " + this.credit + "$");
 
