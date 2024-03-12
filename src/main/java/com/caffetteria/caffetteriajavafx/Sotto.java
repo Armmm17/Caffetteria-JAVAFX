@@ -21,14 +21,14 @@ public class Sotto extends HBox {
 
         setAlignment(Pos.CENTER);
 
-        this.label = new Label("Credit: " + this.credit + "$");
+        this.label = new Label("Credit: " + String.format("%.2f",this.credit) + "$");
 
         Button b1 = new Button("0.50 $");
         b1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 getMain().getSotto().setCredit(credit + 0.5);
-                getMain().getSotto().getLabel().setText("Credit: " + credit + "$");
+                getMain().getSotto().getLabel().setText("Credit: " + String.format("%.2f", credit) + "$");
 
 
             }
@@ -39,7 +39,7 @@ public class Sotto extends HBox {
             @Override
             public void handle(ActionEvent actionEvent) {
                 getMain().getSotto().setCredit(credit + 1);
-                getMain().getSotto().getLabel().setText("Credit: " + credit + "$");
+                getMain().getSotto().getLabel().setText("Credit: " + String.format("%.2f", credit) + "$");
 
 
             }
@@ -50,7 +50,7 @@ public class Sotto extends HBox {
             @Override
             public void handle(ActionEvent actionEvent) {
                 getMain().getSotto().setCredit(credit + 2);
-                getMain().getSotto().getLabel().setText("Credit: " + credit + "$");
+                getMain().getSotto().getLabel().setText("Credit: " + String.format("%.2f", credit) + "$");
             }
         });
 

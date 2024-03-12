@@ -30,8 +30,12 @@ public class Card extends VBox {
         this.btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                getSopra().getMain().getSotto().setCredit(getSopra().getMain().getSotto().getCredit() - price);
-                getSopra().getMain().getSotto().getLabel().setText("Credit: " + getSopra().getMain().getSotto().getCredit() + "$");
+                if(getSopra().getMain().getSotto().getCredit() < price){
+
+                }else {
+                    getSopra().getMain().getSotto().setCredit(getSopra().getMain().getSotto().getCredit() - price);
+                    getSopra().getMain().getSotto().getLabel().setText("Credit: " + String.format("%.2f", getSopra().getMain().getSotto().getCredit()) + "$");
+                }
             }
         });
 
@@ -39,6 +43,10 @@ public class Card extends VBox {
         getChildren().add(this.btn);
         getChildren().add(this.price);
 
+    }
+
+    public Main getMain() {
+        return main;
     }
 
     public Sopra getSopra() {
